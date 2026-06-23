@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bicho Feliz – Assistente Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">🐾</span>
+        <div class="logo-text">
+          <span class="logo-name">Bicho Feliz</span>
+          <span class="logo-sub">Clínica Veterinária</span>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>Assistente Online</span>
+        <button id="openConfigBtn" class="config-header-btn" title="Configurar API">⚙️</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <aside class="sidebar">
+      <p class="sidebar-title">Perguntas rápidas</p>
+      <ul class="quick-list">
+        <li><button class="quick-btn" data-q="Quais são os horários de funcionamento da clínica?">🕐 Horários de atendimento</button></li>
+        <li><button class="quick-btn" data-q="Como faço para agendar uma consulta?">📅 Agendar consulta</button></li>
+        <li><button class="quick-btn" data-q="Quais vacinas meu cachorro precisa tomar por ano?">💉 Vacinas para cães</button></li>
+        <li><button class="quick-btn" data-q="Meu gato está vomitando. O que pode ser?">🐱 Gato vomitando</button></li>
+        <li><button class="quick-btn" data-q="Quais são os sinais de que meu pet está com dor?">⚠️ Sinais de dor no pet</button></li>
+        <li><button class="quick-btn" data-q="Com que frequência devo levar meu pet ao veterinário?">🩺 Frequência de consultas</button></li>
+        <li><button class="quick-btn" data-q="Quais alimentos são tóxicos para cães e gatos?">🚫 Alimentos proibidos</button></li>
+      </ul>
+
+      <div class="sidebar-notice">
+        <span class="notice-icon">ℹ️</span>
+        <p>Este assistente oferece orientações gerais. Para diagnósticos, consulte sempre um veterinário.</p>
+      </div>
+    </aside>
+
+    <section class="chat-container">
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Histórico de conversa">
+        <div class="message bot-message" id="welcomeMessage">
+          <div class="avatar bot-avatar" aria-hidden="true">🐾</div>
+          <div class="bubble">
+            <p>Olá! 👋 Sou o assistente virtual da <strong>Bicho Feliz</strong>.</p>
+            <p>Posso te ajudar com dúvidas sobre saúde animal, agendamentos, vacinas, cuidados gerais e muito mais.</p>
+            <p>Como posso te ajudar hoje? 🐶🐱</p>
+            <time class="msg-time" datetime="">agora</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="input-row">
+          <textarea
+            id="userInput"
+            class="chat-input"
+            placeholder="Digite sua dúvida sobre seu pet..."
+            rows="1"
+            maxlength="1000"
+            aria-label="Campo de mensagem"
+          ></textarea>
+          <button id="sendBtn" class="send-btn" aria-label="Enviar mensagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <div class="input-meta">
+          <span id="charCount" class="char-count">0 / 1000</span>
+          <span class="input-hint">Enter para enviar · Shift+Enter para nova linha</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="configModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2 id="modalTitle">🔑 Configurar API Gemini</h2>
+          <button id="closeModalBtn" class="close-btn" aria-label="Fechar" style="display: none;">✖</button>
+        </div>
+        <p style="margin-top: 6px;">Insira sua chave de API do Google Gemini para ativar o assistente.</p>
+      </div>
+      <div class="modal-body">
+        <label for="apiKeyInput" class="field-label">Chave de API</label>
+        <input
+          type="password"
+          id="apiKeyInput"
+          class="field-input"
+          placeholder="AIzaSy..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <p id="apiStatusMessage" class="api-status-msg"></p>
+
+        <p class="field-hint">
+          Obtenha sua chave gratuita em
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">Google AI Studio</a>.
+          A chave é salva apenas no seu navegador (localStorage).
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button id="saveApiKey" class="btn-primary">Salvar e iniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
