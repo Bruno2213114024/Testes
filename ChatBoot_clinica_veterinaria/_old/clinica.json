@@ -1,0 +1,388 @@
+{
+  "clinica": {
+    "nome": "Bicho Feliz",
+    "tipo": "Clínica Veterinária",
+    "telefone": "(11) 9999-8888",
+    "horarios": {
+      "segunda_sexta": "08:00 – 19:00",
+      "sabado": "08:00 – 14:00",
+      "domingo": "Fechado"
+    },
+    "observacoes": "Atendimento de emergência disponível mediante consulta prévia por telefone.",
+    "formas_pagamento": {
+      "aceitas": [
+        "PIX",
+        "Dinheiro",
+        "Cartão de Débito",
+        "Cartão de Crédito"
+      ],
+      "parcelamento": "Até 6x sem juros no cartão de crédito"
+    },
+    "endereco": "Rua Exemplo, 123 - Centro",
+    "whatsapp": "(11) 99999-8888",
+    "convenios": [
+      "PetLove Saúde",
+      "DogLife",
+      "Não possui outros convênios"
+    ]
+  },
+  "servicos": [
+    {
+      "id": "consulta_clinica",
+      "nome": "Consulta Clínica Geral",
+      "categoria": "Consultas",
+      "preco": 120.0,
+      "descricao": "Avaliação completa do estado de saúde do animal, incluindo exame físico, verificação de peso, temperatura e orientações ao tutor.",
+      "duracao_minutos": 30,
+      "especies": [
+        "cão",
+        "gato",
+        "pássaro",
+        "roedor",
+        "peixe"
+      ]
+    },
+    {
+      "id": "consulta_retorno",
+      "nome": "Consulta de Retorno",
+      "categoria": "Consultas",
+      "preco": 70.0,
+      "descricao": "Reavaliação do paciente após tratamento ou cirurgia, para acompanhamento da evolução clínica.",
+      "duracao_minutos": 20,
+      "especies": [
+        "cão",
+        "gato",
+        "pássaro",
+        "roedor"
+      ]
+    },
+    {
+      "id": "consulta_urgencia",
+      "nome": "Consulta de Urgência",
+      "categoria": "Consultas",
+      "preco": 220.0,
+      "descricao": "Atendimento prioritário para casos agudos que exigem avaliação imediata, fora do horário de agendamento regular.",
+      "duracao_minutos": 45,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "vacina_v8",
+      "nome": "Vacina V8 (Octavalente)",
+      "categoria": "Vacinação",
+      "preco": 95.0,
+      "descricao": "Vacina polivalente para cães que protege contra Cinomose, Hepatite, Parvovirose, Parainfluenza, Adenovirose, Leptospirose e Coronavirose.",
+      "duracao_minutos": 15,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "vacina_v10",
+      "nome": "Vacina V10 (Divalente ampliada)",
+      "categoria": "Vacinação",
+      "preco": 115.0,
+      "descricao": "Vacina para cães com cobertura ampliada, incluindo proteção contra dois sorotipos adicionais de Leptospirose.",
+      "duracao_minutos": 15,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "vacina_antirrábica",
+      "nome": "Vacina Antirrábica",
+      "categoria": "Vacinação",
+      "preco": 55.0,
+      "descricao": "Imunização obrigatória contra a Raiva, aplicável a cães e gatos. Anual ou conforme protocolo municipal.",
+      "duracao_minutos": 10,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "vacina_tríplice_felina",
+      "nome": "Vacina Tríplice Felina (V3)",
+      "categoria": "Vacinação",
+      "preco": 85.0,
+      "descricao": "Vacina para gatos que protege contra Rinotraqueíte, Calicivirose e Panleucopenia felina.",
+      "duracao_minutos": 15,
+      "especies": [
+        "gato"
+      ]
+    },
+    {
+      "id": "vacina_quádrupla_felina",
+      "nome": "Vacina Quádrupla Felina (V4)",
+      "categoria": "Vacinação",
+      "preco": 110.0,
+      "descricao": "Vacina para gatos com cobertura adicional contra Clamidiose felina, além das doenças da V3.",
+      "duracao_minutos": 15,
+      "especies": [
+        "gato"
+      ]
+    },
+    {
+      "id": "vacina_gripe_canina",
+      "nome": "Vacina Gripe Canina (Bordetella)",
+      "categoria": "Vacinação",
+      "preco": 75.0,
+      "descricao": "Proteção contra a Tosse dos Canis (Bordetella bronchiseptica). Indicada para cães que frequentam hotéis, creches ou parques.",
+      "duracao_minutos": 10,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "castracao_cao_pequeno",
+      "nome": "Castração – Cão de Pequeno Porte (até 10 kg)",
+      "categoria": "Cirurgias",
+      "preco": 480.0,
+      "descricao": "Procedimento cirúrgico de orquiectomia (macho) ou ovariosalpingohisterectomia (fêmea) para cães até 10 kg. Inclui anestesia e internação pós-cirúrgica.",
+      "duracao_minutos": 90,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "castracao_cao_medio",
+      "nome": "Castração – Cão de Médio Porte (10–25 kg)",
+      "categoria": "Cirurgias",
+      "preco": 680.0,
+      "descricao": "Castração para cães de médio porte. Inclui anestesia, monitoramento anestésico e internação pós-cirúrgica.",
+      "duracao_minutos": 120,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "castracao_cao_grande",
+      "nome": "Castração – Cão de Grande Porte (acima de 25 kg)",
+      "categoria": "Cirurgias",
+      "preco": 950.0,
+      "descricao": "Castração para cães de grande porte com anestesia especializada e monitoramento intensivo. Inclui internação pós-cirúrgica.",
+      "duracao_minutos": 150,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "castracao_gato_macho",
+      "nome": "Castração – Gato Macho",
+      "categoria": "Cirurgias",
+      "preco": 280.0,
+      "descricao": "Orquiectomia felina, procedimento rápido e seguro. Inclui anestesia e acompanhamento pós-cirúrgico.",
+      "duracao_minutos": 40,
+      "especies": [
+        "gato"
+      ]
+    },
+    {
+      "id": "castracao_gata_femea",
+      "nome": "Castração – Gata Fêmea",
+      "categoria": "Cirurgias",
+      "preco": 420.0,
+      "descricao": "Ovariosalpingohisterectomia felina. Inclui anestesia, internação de 12h e orientações pós-operatórias.",
+      "duracao_minutos": 75,
+      "especies": [
+        "gato"
+      ]
+    },
+    {
+      "id": "hemograma",
+      "nome": "Hemograma Completo",
+      "categoria": "Exames Laboratoriais",
+      "preco": 85.0,
+      "descricao": "Análise das células sanguíneas (eritrócitos, leucócitos e plaquetas), essencial para triagem de infecções, anemias e distúrbios imunológicos.",
+      "duracao_minutos": 20,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "bioquimica_renal",
+      "nome": "Perfil Bioquímico Renal",
+      "categoria": "Exames Laboratoriais",
+      "preco": 110.0,
+      "descricao": "Avalia a função renal através de dosagem de Ureia, Creatinina e Fósforo. Indicado para triagem e monitoramento de doença renal crônica.",
+      "duracao_minutos": 20,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "bioquimica_hepatica",
+      "nome": "Perfil Bioquímico Hepático",
+      "categoria": "Exames Laboratoriais",
+      "preco": 130.0,
+      "descricao": "Avalia a função hepática com dosagem de ALT, AST, GGT, Fosfatase Alcalina e Bilirrubinas.",
+      "duracao_minutos": 20,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "exame_fezes",
+      "nome": "Exame Parasitológico de Fezes",
+      "categoria": "Exames Laboratoriais",
+      "preco": 55.0,
+      "descricao": "Identifica ovos e larvas de parasitas intestinais como giárdia, toxocara e ancilostomo.",
+      "duracao_minutos": 15,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "raio_x",
+      "nome": "Radiografia Digital (por projeção)",
+      "categoria": "Diagnóstico por Imagem",
+      "preco": 160.0,
+      "descricao": "Imagem radiográfica digital de alta resolução para avaliação de ossos, tórax ou abdômen. Cada projeção adicional tem desconto de 30%.",
+      "duracao_minutos": 20,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "ultrassom",
+      "nome": "Ultrassonografia Abdominal",
+      "categoria": "Diagnóstico por Imagem",
+      "preco": 280.0,
+      "descricao": "Avaliação dos órgãos abdominais (fígado, baço, rins, bexiga, útero, próstata) por imagem ultrassonográfica em tempo real.",
+      "duracao_minutos": 40,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "banho_pequeno",
+      "nome": "Banho – Porte Pequeno (até 8 kg)",
+      "categoria": "Estética e Bem-estar",
+      "preco": 55.0,
+      "descricao": "Banho com shampoo hipoalergênico, condicionador, secagem e perfume. Para cães e gatos de pequeno porte.",
+      "duracao_minutos": 60,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "banho_medio",
+      "nome": "Banho – Porte Médio (8–20 kg)",
+      "categoria": "Estética e Bem-estar",
+      "preco": 75.0,
+      "descricao": "Banho completo com produtos premium, secagem e perfume para cães de médio porte.",
+      "duracao_minutos": 75,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "banho_tosa",
+      "nome": "Banho + Tosa Higiênica",
+      "categoria": "Estética e Bem-estar",
+      "preco": 95.0,
+      "descricao": "Banho completo acrescido de tosa higiênica (região anal, patas e focinho). Para cães de pequeno e médio porte.",
+      "duracao_minutos": 90,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "tosa_completa",
+      "nome": "Tosa Completa",
+      "categoria": "Estética e Bem-estar",
+      "preco": 130.0,
+      "descricao": "Tosa completa com modelagem personalizada (padrão de raça ou a combinar com o tutor). Inclui banho, secagem e acabamento.",
+      "duracao_minutos": 120,
+      "especies": [
+        "cão"
+      ]
+    },
+    {
+      "id": "microchip",
+      "nome": "Implante de Microchip",
+      "categoria": "Procedimentos Preventivos",
+      "preco": 90.0,
+      "descricao": "Implante de microchip de identificação ISO 11784/11785 com registro no sistema nacional. Procedimento rápido e indolor.",
+      "duracao_minutos": 15,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "vermifugo",
+      "nome": "Vermifugação (aplicação + medicamento)",
+      "categoria": "Procedimentos Preventivos",
+      "preco": 45.0,
+      "descricao": "Aplicação de vermífugo oral de amplo espectro conforme peso e espécie. Inclui o medicamento e orientações de reforço.",
+      "duracao_minutos": 10,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "antipulgas_carrapatos",
+      "nome": "Aplicação de Antipulgas e Carrapatos",
+      "categoria": "Procedimentos Preventivos",
+      "preco": 60.0,
+      "descricao": "Aplicação de produto tópico ou oral (spot-on ou comprimido) de acordo com o peso e espécie do animal. Produto incluso.",
+      "duracao_minutos": 10,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "internacao_dia",
+      "nome": "Internação (diária)",
+      "categoria": "Internação e Monitoramento",
+      "preco": 180.0,
+      "descricao": "Diária de internação com monitoramento contínuo, administração de medicamentos prescritos e alimentação. Valor por período de 24h.",
+      "duracao_minutos": 1440,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "fluidoterapia",
+      "nome": "Fluidoterapia Intravenosa (por dia)",
+      "categoria": "Internação e Monitoramento",
+      "preco": 95.0,
+      "descricao": "Administração de solução salina ou Ringer lactato via acesso venoso para reidratação e suporte metabólico. Valor diário, não inclui cateter.",
+      "duracao_minutos": 480,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    },
+    {
+      "id": "consulta_nutricional",
+      "nome": "Consulta Nutricional",
+      "categoria": "Consultas",
+      "preco": 140.0,
+      "descricao": "Avaliação da condição corporal e elaboração de plano alimentar personalizado, podendo incluir dieta caseira ou ração funcional.",
+      "duracao_minutos": 40,
+      "especies": [
+        "cão",
+        "gato"
+      ]
+    }
+  ],
+  "faq": {
+    "formas_pagamento": "Aceitamos PIX, dinheiro, cartão de débito e crédito. Parcelamos em até 6x sem juros.",
+    "agendamento": "Os agendamentos podem ser realizados por telefone, WhatsApp ou presencialmente.",
+    "emergencia": "Atendimento emergencial mediante contato prévio."
+  }
+}

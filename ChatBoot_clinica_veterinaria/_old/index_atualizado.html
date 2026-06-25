@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bicho Feliz – Assistente Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">🐾</span>
+        <div class="logo-text">
+          <span class="logo-name">Bicho Feliz</span>
+          <span class="logo-sub">Clínica Veterinária</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-status" id="headerStatus">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Verificando...</span>
+        </div>
+        <!-- Botão para abrir configurações -->
+        <button class="config-tab-btn" id="openConfigBtn" title="Configurações da API">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>API</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <main class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- RAG status badge -->
+      <div class="rag-badge" id="ragBadge" title="Status do catálogo de serviços">
+        <span class="rag-dot" id="ragDot"></span>
+        <span id="ragLabel">Carregando catálogo...</span>
+      </div>
+
+      <p class="sidebar-title">Perguntas rápidas</p>
+      <ul class="quick-list">
+        <li><button class="quick-btn" data-q="Quais são os horários de funcionamento da clínica?">🕐 Horários de atendimento</button></li>
+        <li><button class="quick-btn" data-q="Como faço para agendar uma consulta?">📅 Agendar consulta</button></li>
+        <li><button class="quick-btn" data-q="Quais são todos os serviços disponíveis e seus preços?">💰 Ver tabela de preços</button></li>
+        <li><button class="quick-btn" data-q="Quais vacinas meu cachorro precisa tomar por ano e quanto custam?">💉 Vacinas para cães</button></li>
+        <li><button class="quick-btn" data-q="Quanto custa a castração de um gato macho?">✂️ Preço de castração</button></li>
+        <li><button class="quick-btn" data-q="Quais exames laboratoriais vocês oferecem e quais são os preços?">🔬 Exames laboratoriais</button></li>
+        <li><button class="quick-btn" data-q="Meu gato está vomitando. O que pode ser?">🐱 Gato vomitando</button></li>
+        <li><button class="quick-btn" data-q="Quais são os sinais de que meu pet está com dor?">⚠️ Sinais de dor no pet</button></li>
+        <li><button class="quick-btn" data-q="Quais alimentos são tóxicos para cães e gatos?">🚫 Alimentos proibidos</button></li>
+          <li><button class="quick-btn" data-q="Quais formas de pagamento vocês aceitam?">💳 Formas de pagamento</button></li>
+      </ul>
+
+      <div class="sidebar-notice">
+        <span class="notice-icon">ℹ️</span>
+        <p>Este assistente oferece orientações gerais. Para diagnósticos, consulte sempre um veterinário.</p>
+      </div>
+    </aside>
+
+    <!-- CHAT AREA -->
+    <section class="chat-container" id="chatView">
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Histórico de conversa">
+        <div class="message bot-message" id="welcomeMessage">
+          <div class="avatar bot-avatar" aria-hidden="true">🐾</div>
+          <div class="bubble">
+            <p>Olá! 👋 Sou o assistente virtual da <strong>Bicho Feliz</strong>.</p>
+            <p>Posso te ajudar com dúvidas sobre saúde animal, agendamentos, vacinas, cuidados gerais e muito mais.</p>
+            <p>Como posso te ajudar hoje? 🐶🐱</p>
+            <time class="msg-time" datetime="">agora</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="input-row">
+          <textarea
+            id="userInput"
+            class="chat-input"
+            placeholder="Digite sua dúvida sobre seu pet..."
+            rows="1"
+            maxlength="1000"
+            aria-label="Campo de mensagem"
+          ></textarea>
+          <button id="sendBtn" class="send-btn" aria-label="Enviar mensagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <div class="input-meta">
+          <span id="charCount" class="char-count">0 / 1000</span>
+          <span class="input-hint">Enter para enviar · Shift+Enter para nova linha</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIG PAGE (oculta por padrão) -->
+    <section class="config-page hidden" id="configView">
+      <div class="config-card">
+
+        <div class="config-card-header">
+          <div class="config-header-icon">🔑</div>
+          <div>
+            <h2>Configuração da API Gemini</h2>
+            <p>Gerencie sua chave de acesso ao Google Gemini</p>
+          </div>
+        </div>
+
+        <!-- Status atual -->
+        <div class="config-status-box" id="configStatusBox">
+          <div class="config-status-icon" id="configStatusIcon">❓</div>
+          <div class="config-status-text">
+            <strong id="configStatusTitle">Nenhuma chave configurada</strong>
+            <span id="configStatusDesc">Insira uma chave abaixo para ativar o assistente.</span>
+          </div>
+        </div>
+
+        <!-- Chave atual mascarada -->
+        <div class="config-current" id="configCurrentRow" style="display:none">
+          <span class="config-current-label">Chave ativa:</span>
+          <code class="config-current-key" id="configCurrentKey">—</code>
+          <button class="btn-link-danger" id="removeKeyBtn">Remover</button>
+        </div>
+
+        <!-- Formulário nova chave -->
+        <div class="config-form">
+          <label class="field-label" for="newApiKeyInput">
+            Nova chave de API
+          </label>
+          <div class="key-input-row">
+            <input
+              type="password"
+              id="newApiKeyInput"
+              class="field-input"
+              placeholder="Cole aqui sua chave AIzaSy..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button class="toggle-visibility-btn" id="toggleVisibilityBtn" title="Mostrar/ocultar chave" type="button">
+              <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feedback de validação -->
+          <div class="validation-feedback hidden" id="validationFeedback">
+            <span id="validationIcon"></span>
+            <span id="validationMsg"></span>
+          </div>
+
+          <p class="field-hint">
+            Não tem uma chave? Crie gratuitamente em
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">Google AI Studio</a>.
+            A chave fica salva apenas no seu navegador.
+          </p>
+
+          <div class="config-actions">
+            <button class="btn-secondary" id="validateBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+                <polyline points="9 11 12 14 22 4"></polyline>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+              Testar chave
+            </button>
+            <button class="btn-primary" id="saveNewKeyBtn">
+              Salvar e usar esta chave
+            </button>
+          </div>
+        </div>
+
+        <!-- Instruções -->
+        <details class="config-help">
+          <summary>Como obter minha chave de API?</summary>
+          <ol>
+            <li>Acesse <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a></li>
+            <li>Faça login com sua conta Google</li>
+            <li>Clique em <strong>"Create API key"</strong></li>
+            <li>Selecione <strong>"Create API key in new project"</strong></li>
+            <li>Copie a chave gerada (começa com <code>AIzaSy...</code>)</li>
+            <li>Cole no campo acima e clique em <strong>"Testar chave"</strong></li>
+          </ol>
+        </details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
