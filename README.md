@@ -1,38 +1,74 @@
 # Olá, eu sou o Bruno! 👋
 
-Sou um desenvolvedor focado em **Análise e Desenvolvimento de Sistemas** e **Automação Industrial**, apaixonado por criar soluções que conectam o mundo físico ao digital por meio de código, dados e automação inteligente.
+Sou um **Analista de Software** que atua exatamente na convergência entre **Automação Industrial, IoT, Desenvolvimento e Engenharia de Dados**. 
 
-Atualmente, dedico meus estudos a aprofundar conhecimentos em **Engenharia de Dados**, **Desenvolvimento de RPA (Robotic Process Automation)** e **Inteligência Artificial aplicada à programação**.
+Minha especialidade é criar soluções de ponta a ponta: desde a aquisição de dados em sensores e dispositivos de campo até sua disponibilização em APIs, bancos de dados, dashboards e sistemas ERP, garantindo integração e alta disponibilidade em ambientes críticos.
 
 ---
 
-### 🛠️ Tecnologias e Ferramentas
+### 🛠️ Minha Stack Técnica
 
-*   **Linguagens:** Python, SQL, C/C++
-*   **Dados & Backend:** SQL Server, Integração de Sistemas, Cloud (AWS/Azure)
-*   **Automação & RPA:** Automação de Processos (Python/Bibliotecas de RPA), Controladores Lógicos Programáveis (CLPs - Altus Nexto)
-*   **Ferramentas & Devops:** Git, GitHub, Docker
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <h4>⚡ Integração, Automação & IoT</h4>
+      <ul>
+        <li>Systems Integration & ERP Integration</li>
+        <li>APIs REST & SOAP (FastAPI, OpenAPI/Swagger)</li>
+        <li><b>Protocolos:</b> MQTT, Modbus RTU, RS-485, TCP/IP</li>
+        <li><b>Hardware & Automação:</b> ESP32, C, C++, n8n</li>
+      </ul>
+    </td>
+    <td valign="top" width="50%">
+      <h4>📊 Dados & Backend</h4>
+      <ul>
+        <li><b>Linguagem Principal:</b> Python</li>
+        <li><b>Bancos de Dados:</b> SQL Server (T-SQL), PostgreSQL, Oracle Database</li>
+        <li><b>Engenharia:</b> ETL, Data Modeling, Query Optimization</li>
+        <li><b>Visualização:</b> Power BI</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%">
+      <h4>☁️ Cloud & DevOps</h4>
+      <ul>
+        <li>AWS (RDS e serviços core)</li>
+        <li>Docker, Git, GitHub</li>
+        <li>Render</li>
+      </ul>
+    </td>
+    <td valign="top" width="50%">
+      <h4>🖥️ Infraestrutura & OS</h4>
+      <ul>
+        <li>Windows Server, Linux, macOS</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### 🚀 Projetos em Destaque
 
-*   **[Nome do Projeto de RPA]**: Automação ponta a ponta desenvolvida em Python para otimização de processos internos.
-*   **[Nome do Projeto de Dados]**: Pipeline de dados estruturado utilizando SQL Server e Python para análise preditiva/relatórios.
-*   **[Nome de um Projeto de Automação/IoT]**: Integração de sistemas industriais com plataformas em nuvem para monitoramento em tempo real.
+* **[Plataforma IoT de Monitoramento de Energia](LINK_DO_REPOSITORIO_AQUI)**
+    * *Stack:* ESP32, FastAPI, PostgreSQL.
+    * Coleta, armazenamento e visualização de dados elétricos em tempo real via dashboard web.
+* **[Automação de Processos com n8n & APIs](LINK_DO_REPOSITORIO_AQUI)**
+    * *Stack:* n8n, APIs REST/SOAP, Python.
+    * Integração entre sistemas corporativos e ERPs para eliminação de tarefas manuais.
+* **[Análise Avançada de Datasets com Python](LINK_DO_REPOSITORIO_AQUI)**
+    * *Stack:* Python, Pandas, SQL.
+    * Tratamento e análise de grandes volumes de dados (10k+ registros) para suporte à tomada de decisão.
+* **[Gateway de Integração Industrial-Corporativo](LINK_DO_REPOSITORIO_AQUI)**
+    * *Stack:* Python, Protocolos Industriais, ERP Integration.
+    * Conexão de dispositivos de campo diretamente a sistemas corporativos de alto nível.
 
 ---
 
-### 📈 O que estou buscando/estudando agora:
-*   Aprofundamento em arquitetura de dados e Cloud Computing.
-*   Aplicações práticas de Modelos de Linguagem (LLMs) e Generative AI no fluxo de desenvolvimento.
+### 📫 Vamos nos conectar?
 
----
+* **LinkedIn:** [LinkedIn/brun0-maciel](https://www.linkedin.com/in/brun0-maciel)
+* **E-mail:** [alvesbruno.maciel@gmail.com](mailto:alvesbruno.maciel@gmail.com)
 
-### 📫 Como me encontrar:
-
-*   **LinkedIn:** [Seu Link Aqui]
-*   **E-mail:** [Seu E-mail Aqui]
-*   **Portfólio Web:** [Seu Link Aqui, se tiver]
-
-"Automatizando o presente para programar o futuro." 🚀
+*Conectando o chão de fábrica à nuvem, linha por linha de código.* 🌐🏭
